@@ -1,7 +1,7 @@
 # Daily Expenses Project
 
 - Python 
-- Sqlite
+- mySql
 ---
 ### V.0
 
