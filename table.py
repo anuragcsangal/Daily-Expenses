@@ -1,13 +1,17 @@
 import mysql.connector
+import db.py 
+
 
 db = mysql.connector.connect(
   host="localhost",
   user="root",
   password="root",
-  database="DailyExpenses"
+  database=database
 )
 
 cursor = db.cursor()
 
-cursor.execute("create table userName(today date , morning int, afternoon int, night int, extras int )")
+table = input("Enter Table Name: ")
+
+cursor.execute(f"create table {table}(today date , morning int, afternoon int, night int, extras int )")
 

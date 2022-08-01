@@ -8,5 +8,8 @@ db = mysql.connector.connect(
 
 cursor = db.cursor()
 
-cursor.execute("create database DailyExpenses")
+database = input("Enter Database Name: ")
+
+cursor.execute(f"create database {database}")
+
 
