@@ -1,19 +1,16 @@
 import mysql.connector
 from tabulate import tabulate
-import db.py
-import table.py
  
 
 mydb = mysql.connector.connect(
                 host="localhost",
                 user="root",
                 passwd="root",
-                database=database
+                database="Daily-Expenses"
               )
 
 mycursor = mydb.cursor()
-mycursor.execute(f"SELECT * FROM {table
-        }")
+mycursor.execute(f"SELECT * FROM de")
 myresult = mycursor.fetchall()
 
 
